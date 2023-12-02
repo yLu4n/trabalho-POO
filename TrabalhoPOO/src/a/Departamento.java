@@ -5,6 +5,12 @@ public class Departamento {
 	private String sigla;
 	private String descricao;
 	
+	public Departamento(int id, String sigla, String descricao) {
+		super();
+		this.id = id;
+		this.sigla = sigla;
+		this.descricao = descricao;
+	}
 	
 	public int getId() {
 		return id;

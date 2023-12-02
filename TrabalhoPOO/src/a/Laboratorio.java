@@ -6,6 +6,13 @@ public class Laboratorio {
 	private String descricao;
 	private int capacidade;
 	
+	public Laboratorio(int id, String nome, String descricao, int capacidade) {
+		this.id = id;
+		this.nome = nome;
+		this.descricao = descricao;
+		this.capacidade = capacidade;
+	}
+	
 	public int getId() {
 		return id;
 	}

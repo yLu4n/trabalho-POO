@@ -1,23 +1,25 @@
-package a;
+package universidade.entidades;
 
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 public class Solicitacao {
-	private Laboratorio laboratorio;
+    private Laboratorio laboratorio;
     private Professor professor;
     private Disciplina disciplina;
-    private Set<Aluno> alunos;
+    private List<Aluno> alunos;
     private Date data;
-    private int tempUtilizacao;
+    private int tempoMinutos;
 
-	public Solicitacao(Laboratorio laboratorio, Professor professor, Disciplina disciplina, Set<Aluno> alunos, 
-			   Date data, int tempoUtilizacao) {
+    public Solicitacao(Laboratorio laboratorio, Professor professor, Disciplina disciplina,
+                       List<Aluno> alunos, Date data, int tempoMinutos) {
         this.laboratorio = laboratorio;
         this.professor = professor;
         this.disciplina = disciplina;
         this.alunos = alunos;
-	}
+        this.data = data;
+        this.tempoMinutos = tempoMinutos;
+    }
 
 	public Laboratorio getLaboratorio() {
 		return laboratorio;
@@ -31,7 +33,7 @@ public class Solicitacao {
 		return disciplina;
 	}
 
-	public Set<Aluno> getAlunos() {
+	public List<Aluno> getAlunos() {
 		return alunos;
 	}
 
@@ -39,8 +41,8 @@ public class Solicitacao {
 		return data;
 	}
 
-	public int getTempUtilizacao() {
-		return tempUtilizacao;
+	public int getTempoMinutos() {
+		return tempoMinutos;
 	}
 
 	public void setLaboratorio(Laboratorio laboratorio) {
@@ -55,7 +57,7 @@ public class Solicitacao {
 		this.disciplina = disciplina;
 	}
 
-	public void setAlunos(Set<Aluno> alunos) {
+	public void setAlunos(List<Aluno> alunos) {
 		this.alunos = alunos;
 	}
 
@@ -63,8 +65,12 @@ public class Solicitacao {
 		this.data = data;
 	}
 
-	public void setTempUtilizacao(int tempUtilizacao) {
-		this.tempUtilizacao = tempUtilizacao;
+	public void setTempoMinutos(int tempoMinutos) {
+		this.tempoMinutos = tempoMinutos;
 	}
 	
+    public String toString() {
+    	return "";
+    }
+    
 }

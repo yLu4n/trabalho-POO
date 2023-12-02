@@ -6,6 +6,13 @@ public class Professor {
 	private boolean ativo;
 	private Departamento departamento;
 	
+	public Professor(int id, String nome, boolean ativo, Departamento departamento) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.ativo = ativo;
+		this.departamento = departamento;
+	}
 	
 	public int getId() {
 		return id;

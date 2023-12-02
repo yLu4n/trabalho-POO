@@ -14,7 +14,6 @@ public abstract class Base implements IBase{
     public List<Laboratorio> getLaboratorios() {
         List<Laboratorio> laboratorios = new ArrayList<>();
 
-        // Criando laboratórios conforme a história
         for (int i = 1; i <= QTDE_LABORATORIOS; i++) {
             int capacidade;
             boolean ativo = true;
@@ -27,7 +26,7 @@ public abstract class Base implements IBase{
                 capacidade = 15;
             }
 
-            Laboratorio lab = new Laboratorio(i, capacidade, ativo);
+            Laboratorio lab = new Laboratorio(i, capacidade);
             laboratorios.add(lab);
         }
 
@@ -38,7 +37,6 @@ public abstract class Base implements IBase{
     public List<Departamento> getDepartamentos() {
         List<Departamento> departamentos = new ArrayList<>();
 
-        // Criando departamentos conforme a história
         for (int i = 1; i <= QTDE_DEPARTAMENTOS; i++) {
             Departamento dept = new Departamento(i, "Dept" + i, "Descrição do Dept" + i);
             departamentos.add(dept);
@@ -51,15 +49,14 @@ public abstract class Base implements IBase{
     public List<Professor> getProfessores() {
         List<Professor> professores = new ArrayList<>();
 
-        // Criando professores conforme a história
         for (int i = 1; i <= QTDE_PROFESSORES; i++) {
             int deptId;
             if (i <= 10) {
-                deptId = 1;  // Engenharia de Software
+                deptId = 1;  
             } else if (i <= 14) {
-                deptId = 2;  // Computação de Alto Desempenho
+                deptId = 2;  
             } else {
-                deptId = 3;  // Infraestrutura Computacional
+                deptId = 3;  
             }
 
             Departamento departamento = getDepartamentoById(deptId);
@@ -75,7 +72,6 @@ public abstract class Base implements IBase{
     public List<Disciplina> getDisciplinas() {
         List<Disciplina> disciplinas = new ArrayList<>();
 
-        // Criando disciplinas conforme a história
         String[] siglas = {"BESO05", "BESO06", "BESO08", "BES011", "BES012", "BES020", "BES026", "BES038", "BES049", "BES048"};
         String[] descricoes = {"Lógica de Programação e Algoritmos", "Estrutura de Dados", "Programação Orientada a Objetos",
                 "Bancos de Dados", "Engenharia de Requisitos", "Programação para Dispositivos Móveis",
@@ -93,7 +89,6 @@ public abstract class Base implements IBase{
     public List<Aluno> getAlunos(int qtde, int inicio) {
         List<Aluno> alunos = new ArrayList<>();
 
-        // Criando alunos conforme a história
         for (int i = inicio; i < inicio + qtde; i++) {
             Aluno aluno = new Aluno(i, "2023" + i, "Aluno" + i, true);
             alunos.add(aluno);
@@ -102,9 +97,8 @@ public abstract class Base implements IBase{
         return alunos;
     }
 
-    // Método auxiliar para obter um departamento pelo ID
     private Departamento getDepartamentoById(int id) {
-        // Supondo que a lista de departamentos já foi preenchida
+
         return getDepartamentos().stream().filter(dept -> dept.getId() == id).findFirst().orElse(null);
     }
 }

@@ -6,6 +6,14 @@ public class Aluno {
 	private String nome;
 	private boolean ativo;
 	
+	public Aluno(int id, String matricula, String nome, boolean ativo) {
+		super();
+		this.id = id;
+		this.matricula = matricula;
+		this.nome = nome;
+		this.ativo = ativo;
+	}
+	
 	public int getId() {
 		return id;
 	}

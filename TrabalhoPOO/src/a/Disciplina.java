@@ -6,6 +6,14 @@ public class Disciplina {
 	private String descricao;
 	private boolean ativa;
 	
+	public Disciplina(int id, String sigla, String descricao, boolean ativa) {
+		super();
+		this.id = id;
+		this.sigla = sigla;
+		this.descricao = descricao;
+		this.ativa = ativa;
+	}
+	
 	public int getId() {
 		return id;
 	}
