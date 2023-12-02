@@ -61,8 +61,9 @@ public class Reserva implements IReserva {
 		Reserva.idCounter = idCounter;
 	}
 
-	public String toString() {
-    	return "";
+    @Override
+    public String toString() {
+        return "Reserva [id=" + id + ", solicitacao=" + solicitacao + ", categoria=" + categoria + ", dataReserva="
+                + dataReserva + ", duracaoMinutos=" + duracaoMinutos + ", dataLiberacao=" + dataLiberacao + "]";
     }
-   
 }

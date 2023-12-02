@@ -70,7 +70,8 @@ public class Solicitacao {
 	}
 	
     public String toString() {
-    	return "";
+        return "Solicitacao [laboratorio=" + laboratorio + ", professor=" + professor + ", disciplina=" + disciplina
+                + ", alunos=" + alunos + ", data=" + data + ", tempoMinutos=" + tempoMinutos + "]";
     }
-    
 }
+
