@@ -5,6 +5,12 @@ public class Laboratorio {
 	private String nome;
 	private String descricao;
 	private int capacidade;
+
+	public Laboratorio(int id, int capacidade, boolean ativo) {
+        	this.id = id;
+        	this.capacidade = capacidade;
+		this.ativo = ativo;
+    	}
 	
 	public int getId() {
 		return id;
